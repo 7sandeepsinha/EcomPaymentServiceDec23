@@ -1,0 +1,25 @@
+Multiple payments
+
+1 Order -> M Payments
+1 User -> M payments
+
+1 Payment -> M users :: NO
+1 Payment -> M orders :: No
+
+Order : Payment -> 1:M
+User : Payment -> 1:M
+
+Payment
+Id
+Amount
+Currency -> Entity
+UserId
+OrderId
+TransactionId
+PaymentStatus -> SUCCESS, FAILED, RECONCILED, PENDING, REFUNDED || ENUM
+CreatedAt
+UpdatedAt
+
+
+Currency -> Enum or Table
+PaymentStatus -> Enum or Table

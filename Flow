@@ -1,0 +1,14 @@
+1 API -> doPayment
+Request Body -> all the required details
+
+API would be called from OrderService
+
+Order -> Payment -> PG -> payment link is received, open the link to pay
+
+1. What details are received from the order service ?
+2. Once we get the entry to payment service, before calling PG,
+insert a payment entry inside the Payment table in Payment Service
+3. Once the payment is done, we will have callback URL on payment service
+4. This callback will update the entry we made earlier when payment
+request was done
+5. Extra calls we need to do will be in the flow of callback URL
